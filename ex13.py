@@ -1,21 +1,29 @@
 Lab:13
 
 Program:
+num=int(input("Enter the number of employee:"))
+count=1
+employee=dict()
+while count <=num:
+    name=input("Enter the name of the Employee :")
+    post=input("Enter Employee post :")
+    salary=int(input("Enter the salary :"))
+    employee[name]=post,salary
+    count+=1
+print("\n\n EMP_NAME POST  \tSALARY ")
+for k in employee:
+    print(k,"\t",employee[k])
 
-name = input('Enter Name of Employee :')
-Post = input("Enter Employee Post : ")
-basic_salary=int(input("Enter the Basic salary:"))
-da=0.4*basic_salary;
-hra=0.2*basic_salary;
-gross_salary=basic_salary+da+hra;
-print("DA = ",da)
-print("HRA = ",hra)
-print("Gross Salary = ",gross_salary)
+output:
+Enter the number of employee:2
+Enter the name of the Employee :Anbu
+Enter Employee post :Web Developer
+Enter the salary :30000
+Enter the name of the Employee :Mani
+Enter Employee post :Editer
+Enter the salary :35000
 
-Output:
-Enter Name of Employee :Shakthivel
-Enter Employee Post : Teacher
-Enter the Basic salary:20000
-DA =  8000.0
-HRA =  4000.0
-Gross Salary =  32000.0
+
+ EMP_NAME POST  	SALARY 
+Anbu 	 ('Web Developer', 30000)
+Mani 	 ('Editer', 35000)
